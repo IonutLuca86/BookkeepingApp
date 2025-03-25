@@ -1,0 +1,208 @@
+[
+  {
+    "ContainingType": "BookkeepingAPI.Controllers.ExpensesController",
+    "Method": "AddExpense",
+    "RelativePath": "api/Expenses",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "expense",
+        "Type": "BookkeepingAPI.Models.Expenses",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookkeepingAPI.Controllers.ExpensesController",
+    "Method": "UpdateExpense",
+    "RelativePath": "api/Expenses",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "expense",
+        "Type": "BookkeepingAPI.Models.Expenses",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookkeepingAPI.Controllers.ExpensesController",
+    "Method": "DeleteExpense",
+    "RelativePath": "api/Expenses/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookkeepingAPI.Controllers.ExpensesController",
+    "Method": "GetExpenses",
+    "RelativePath": "api/Expenses/{yearId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "yearId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookkeepingAPI.Controllers.ExpensesController",
+    "Method": "GetCumulativeExpenses",
+    "RelativePath": "api/Expenses/cumulative/{year}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "year",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookkeepingAPI.Controllers.IncomeController",
+    "Method": "AddIncome",
+    "RelativePath": "api/Income",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "income",
+        "Type": "BookkeepingAPI.Models.NewIncome",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookkeepingAPI.Controllers.IncomeController",
+    "Method": "UpdateIncome",
+    "RelativePath": "api/Income",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "income",
+        "Type": "BookkeepingAPI.Models.Incomes",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookkeepingAPI.Controllers.IncomeController",
+    "Method": "DeleteIncome",
+    "RelativePath": "api/Income/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookkeepingAPI.Controllers.IncomeController",
+    "Method": "GetIncomes",
+    "RelativePath": "api/Income/{yearId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "yearId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookkeepingAPI.Controllers.IncomeController",
+    "Method": "GetCumulativeIncomes",
+    "RelativePath": "api/Income/cumulative/{year}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "year",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookkeepingAPI.Controllers.TypesController",
+    "Method": "GetExpenseTypes",
+    "RelativePath": "api/Types/expenses",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookkeepingAPI.Controllers.TypesController",
+    "Method": "GetIncomeTypes",
+    "RelativePath": "api/Types/incomes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookkeepingAPI.Controllers.YearsController",
+    "Method": "GetYears",
+    "RelativePath": "api/Years",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookkeepingAPI.Controllers.YearsController",
+    "Method": "AddYear",
+    "RelativePath": "api/Years",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "year",
+        "Type": "BookkeepingAPI.Models.Years",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
