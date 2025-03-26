@@ -28,6 +28,29 @@
         }
       }
     },
+    "/api/Expenses/dummy/{yearId}": {
+      "get": {
+        "tags": [
+          "Expenses"
+        ],
+        "parameters": [
+          {
+            "name": "yearId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Expenses": {
       "post": {
         "tags": [
@@ -37,17 +60,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Expenses"
+                "$ref": "#/components/schemas/NewExpense"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/Expenses"
+                "$ref": "#/components/schemas/NewExpense"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/Expenses"
+                "$ref": "#/components/schemas/NewExpense"
               }
             }
           }
@@ -66,17 +89,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Expenses"
+                "$ref": "#/components/schemas/NewExpense"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/Expenses"
+                "$ref": "#/components/schemas/NewExpense"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/Expenses"
+                "$ref": "#/components/schemas/NewExpense"
               }
             }
           }
@@ -135,6 +158,29 @@
       }
     },
     "/api/Income/{yearId}": {
+      "get": {
+        "tags": [
+          "Income"
+        ],
+        "parameters": [
+          {
+            "name": "yearId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Income/dummy/{yearId}": {
       "get": {
         "tags": [
           "Income"
@@ -218,17 +264,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Incomes"
+                "$ref": "#/components/schemas/NewIncome"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/Incomes"
+                "$ref": "#/components/schemas/NewIncome"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/Incomes"
+                "$ref": "#/components/schemas/NewIncome"
               }
             }
           }
@@ -331,123 +377,24 @@
   },
   "components": {
     "schemas": {
-      "Expenses": {
+      "NewExpense": {
         "type": "object",
         "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
           "yearId": {
             "type": "integer",
             "format": "int32"
-          },
-          "year": {
-            "$ref": "#/components/schemas/Years"
           },
           "monthId": {
             "type": "integer",
             "format": "int32"
           },
-          "month": {
-            "$ref": "#/components/schemas/Months"
+          "amount": {
+            "type": "number",
+            "format": "double"
           },
           "expenseTypeId": {
             "type": "integer",
             "format": "int32"
-          },
-          "expenseType": {
-            "$ref": "#/components/schemas/ExpensesTypes"
-          },
-          "amount": {
-            "type": "number",
-            "format": "double"
-          }
-        },
-        "additionalProperties": false
-      },
-      "ExpensesTypes": {
-        "required": [
-          "expenseType"
-        ],
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "expenseType": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "IncomeTypes": {
-        "required": [
-          "incomeType"
-        ],
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "incomeType": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "Incomes": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "yearId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "year": {
-            "$ref": "#/components/schemas/Years"
-          },
-          "monthId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "month": {
-            "$ref": "#/components/schemas/Months"
-          },
-          "incomeTypeId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "incomeType": {
-            "$ref": "#/components/schemas/IncomeTypes"
-          },
-          "amount": {
-            "type": "number",
-            "format": "double"
-          }
-        },
-        "additionalProperties": false
-      },
-      "Months": {
-        "required": [
-          "month"
-        ],
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "month": {
-            "type": "string",
-            "nullable": true
           }
         },
         "additionalProperties": false
@@ -455,10 +402,6 @@
       "NewIncome": {
         "type": "object",
         "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
           "yearId": {
             "type": "integer",
             "format": "int32"
@@ -467,13 +410,13 @@
             "type": "integer",
             "format": "int32"
           },
-          "incomeTypeId": {
-            "type": "integer",
-            "format": "int32"
-          },
           "amount": {
             "type": "number",
             "format": "double"
+          },
+          "incomeTypeId": {
+            "type": "integer",
+            "format": "int32"
           }
         },
         "additionalProperties": false

@@ -14,6 +14,8 @@ namespace BookkeepingAPI.Context
         public DbSet<IncomeTypes> IncomeTypes { get; set; }
         public DbSet<Years> Years { get; set; }
         public DbSet<Months> Months { get; set; }
+        public DbSet<DummyExpenses> DummyExpenses { get; set; }
+        public DbSet<DummyIncomes> DummyIncomes { get; set; }   
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -86,6 +88,39 @@ namespace BookkeepingAPI.Context
                 new ExpensesTypes { Id = 2, ExpenseType = "Utilities" },
                 new ExpensesTypes { Id = 3, ExpenseType = "Groceries" },
                 new ExpensesTypes { Id = 4, ExpenseType = "Other" });
+                       
+            modelBuilder.Entity<DummyIncomes>().HasData(
+                new DummyIncomes { Id = 1, yearId = 1, monthId = 1, Amount = 100, incomeTypeId = 1 },
+                new DummyIncomes { Id = 2, yearId = 1, monthId = 2, Amount = 50, incomeTypeId = 1 },
+                new DummyIncomes { Id = 3, yearId = 1, monthId = 3, Amount = 150, incomeTypeId = 1 },            
+                new DummyIncomes { Id = 5, yearId = 1, monthId = 5, Amount = 800, incomeTypeId = 1 },
+                new DummyIncomes { Id = 6, yearId = 1, monthId = 6, Amount = 50, incomeTypeId = 1 },
+                new DummyIncomes { Id = 7, yearId = 1, monthId = 7, Amount = 100, incomeTypeId = 1 },
+                new DummyIncomes { Id = 8, yearId = 2, monthId = 1, Amount = 100, incomeTypeId = 1 },
+                new DummyIncomes { Id = 9, yearId = 2, monthId = 2, Amount = 50, incomeTypeId = 1 },
+                new DummyIncomes { Id = 10, yearId = 2, monthId = 3, Amount = 150, incomeTypeId = 1 },
+                new DummyIncomes { Id = 11, yearId = 2, monthId = 5, Amount = 800, incomeTypeId = 1 },
+                new DummyIncomes { Id = 12, yearId = 2, monthId = 6, Amount = 50, incomeTypeId = 1 },
+                new DummyIncomes { Id = 13, yearId = 2, monthId = 7, Amount = 100, incomeTypeId = 1 }
+                );
+
+            modelBuilder.Entity<DummyExpenses>().HasData(
+                new DummyExpenses { Id = 1, yearId = 1, monthId = 1, Amount = 200, expenseTypeId = 1 },
+                new DummyExpenses { Id = 2, yearId = 1, monthId = 2, Amount = 70, expenseTypeId = 1 },
+                new DummyExpenses { Id = 3, yearId = 1, monthId = 3, Amount = 120, expenseTypeId = 1 },
+                new DummyExpenses { Id = 4, yearId = 1, monthId = 4, Amount = 200, expenseTypeId = 1 },
+                new DummyExpenses { Id = 5, yearId = 1, monthId = 5, Amount = 300, expenseTypeId = 1 },
+                new DummyExpenses { Id = 6, yearId = 1, monthId = 6, Amount = 50, expenseTypeId = 1 },
+                new DummyExpenses { Id = 7, yearId = 1, monthId = 7, Amount = 50, expenseTypeId = 1 },
+                new DummyExpenses { Id = 8, yearId = 2, monthId = 1, Amount = 100, expenseTypeId = 1 },
+                new DummyExpenses { Id = 9, yearId = 2, monthId = 2, Amount = 130, expenseTypeId = 1 },
+                new DummyExpenses { Id = 10, yearId = 2, monthId = 3, Amount = 150, expenseTypeId = 1 },
+                new DummyExpenses { Id = 11, yearId = 2, monthId = 4, Amount = 200, expenseTypeId = 1 },
+                new DummyExpenses { Id = 12, yearId = 2, monthId = 5, Amount = 300, expenseTypeId = 1 },
+                new DummyExpenses { Id = 13, yearId = 2, monthId = 6, Amount = 50, expenseTypeId = 1 },
+                new DummyExpenses { Id = 14, yearId = 2, monthId = 7, Amount = 50, expenseTypeId = 1 },
+                new DummyExpenses { Id = 15, yearId = 2, monthId = 8, Amount = 100, expenseTypeId = 1 }
+                );
         }
     }
 

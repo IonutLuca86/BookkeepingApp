@@ -3,8 +3,8 @@ import { useEffect, useState } from 'react'
 import './App.css'
 import Dropdown from 'react-bootstrap/Dropdown';
 import { BASE_URL } from "./config";
-import AddNewYear from './Components.jsx/AddNewYear';
-import DisplayBookkeeping from './Components.jsx/DisplayBookkeeping';
+import AddNewYear from './Components/AddNewYear';
+import DisplayBookkeeping from './Components/DisplayBookkeeping';
 
 function App() {
 
@@ -18,7 +18,6 @@ function App() {
       try {
         const response = await fetch(`${BASE_URL}/Years`);
         let yearsList = await response.json();
-        console.log(yearsList)
         setYears(yearsList.sort((a,b) => a.year > b.year? -1: 1) || []); 
       } catch (error) {
         console.error("Error fetching years:", error);
@@ -38,16 +37,18 @@ function App() {
       setSelectedComponent("year");      
   }
 
+
   const Index = () => {
     return(
-      <div>
-        <h1>Index Page</h1>
+      <div className='d-flex flex-column justify-content-between align-items-center mt-5'>
+        <h1>Welcome to the ultimate BookKeeping Tool!</h1>
+        <h3>Select a year to see and start using it!</h3>
       </div>
     )
   } 
 
   return (
-    <div className='container'>
+    <div className='container my-5'>
         <Dropdown data-bs-theme="dark">
         <Dropdown.Toggle id="dropdown-button-dark-example1" variant="secondary">
           Select Year
@@ -66,11 +67,11 @@ function App() {
         </Dropdown.Menu>
       </Dropdown>
 
-        <div>
+        <div className='mt-4'>
           {selectedComponent === "index" && <Index></Index>}
           {selectedComponent === "add" && <AddNewYear existingyears = {years.map(y=>y.year)}                
                   setSelectedComponent = {setSelectedComponent}/>}
-          {selectedComponent === "year" && <DisplayBookkeeping year = {selectedYear} />}
+          {selectedComponent === "year" && <DisplayBookkeeping year = {selectedYear}/>}
         </div>
 
     

@@ -9,7 +9,7 @@
     "Parameters": [
       {
         "Name": "expense",
-        "Type": "BookkeepingAPI.Models.Expenses",
+        "Type": "BookkeepingAPI.Models.NewExpense",
         "IsRequired": true
       }
     ],
@@ -25,7 +25,7 @@
     "Parameters": [
       {
         "Name": "expense",
-        "Type": "BookkeepingAPI.Models.Expenses",
+        "Type": "BookkeepingAPI.Models.NewExpense",
         "IsRequired": true
       }
     ],
@@ -80,6 +80,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "BookkeepingAPI.Controllers.ExpensesController",
+    "Method": "GetDummyExpenses",
+    "RelativePath": "api/Expenses/dummy/{yearId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "yearId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "BookkeepingAPI.Controllers.IncomeController",
     "Method": "AddIncome",
     "RelativePath": "api/Income",
@@ -105,7 +121,7 @@
     "Parameters": [
       {
         "Name": "income",
-        "Type": "BookkeepingAPI.Models.Incomes",
+        "Type": "BookkeepingAPI.Models.NewIncome",
         "IsRequired": true
       }
     ],
@@ -153,6 +169,22 @@
     "Parameters": [
       {
         "Name": "year",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookkeepingAPI.Controllers.IncomeController",
+    "Method": "GetDummyIncomes",
+    "RelativePath": "api/Income/dummy/{yearId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "yearId",
         "Type": "System.Int32",
         "IsRequired": true
       }

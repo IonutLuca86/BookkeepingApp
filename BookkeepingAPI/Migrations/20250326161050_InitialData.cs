@@ -2,14 +2,48 @@
 
 #nullable disable
 
+#pragma warning disable CA1814 // Prefer jagged arrays over multidimensional
+
 namespace BookkeepingAPI.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialMigration : Migration
+    public partial class InitialData : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.CreateTable(
+                name: "DummyExpenses",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    yearId = table.Column<int>(type: "int", nullable: false),
+                    monthId = table.Column<int>(type: "int", nullable: false),
+                    expenseTypeId = table.Column<int>(type: "int", nullable: false),
+                    Amount = table.Column<double>(type: "float", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_DummyExpenses", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "DummyIncomes",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    yearId = table.Column<int>(type: "int", nullable: false),
+                    monthId = table.Column<int>(type: "int", nullable: false),
+                    incomeTypeId = table.Column<int>(type: "int", nullable: false),
+                    Amount = table.Column<double>(type: "float", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_DummyIncomes", x => x.Id);
+                });
+
             migrationBuilder.CreateTable(
                 name: "ExpensesTypes",
                 columns: table => new
@@ -42,7 +76,7 @@ namespace BookkeepingAPI.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Month = table.Column<int>(type: "int", nullable: false)
+                    Month = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -70,8 +104,8 @@ namespace BookkeepingAPI.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     yearId = table.Column<int>(type: "int", nullable: false),
                     monthId = table.Column<int>(type: "int", nullable: false),
-                    expenseTypeId = table.Column<int>(type: "int", nullable: false),
-                    Ammount = table.Column<double>(type: "float", nullable: false)
+                    Amount = table.Column<double>(type: "float", nullable: false),
+                    expenseTypeId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -104,8 +138,8 @@ namespace BookkeepingAPI.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     yearId = table.Column<int>(type: "int", nullable: false),
                     monthId = table.Column<int>(type: "int", nullable: false),
-                    incomeTypeId = table.Column<int>(type: "int", nullable: false),
-                    Amount = table.Column<double>(type: "float", nullable: false)
+                    Amount = table.Column<double>(type: "float", nullable: false),
+                    incomeTypeId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -128,6 +162,97 @@ namespace BookkeepingAPI.Migrations
                         principalTable: "Years",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.InsertData(
+                table: "DummyExpenses",
+                columns: new[] { "Id", "Amount", "expenseTypeId", "monthId", "yearId" },
+                values: new object[,]
+                {
+                    { 1, 200.0, 1, 1, 1 },
+                    { 2, 70.0, 1, 2, 1 },
+                    { 3, 120.0, 1, 3, 1 },
+                    { 4, 200.0, 1, 4, 1 },
+                    { 5, 300.0, 1, 5, 1 },
+                    { 6, 50.0, 1, 6, 1 },
+                    { 7, 50.0, 1, 7, 1 },
+                    { 8, 100.0, 1, 1, 2 },
+                    { 9, 130.0, 1, 2, 2 },
+                    { 10, 150.0, 1, 3, 2 },
+                    { 11, 200.0, 1, 4, 2 },
+                    { 12, 300.0, 1, 5, 2 },
+                    { 13, 50.0, 1, 6, 2 },
+                    { 14, 50.0, 1, 7, 2 },
+                    { 15, 100.0, 1, 8, 2 }
+                });
+
+            migrationBuilder.InsertData(
+                table: "DummyIncomes",
+                columns: new[] { "Id", "Amount", "incomeTypeId", "monthId", "yearId" },
+                values: new object[,]
+                {
+                    { 1, 100.0, 1, 1, 1 },
+                    { 2, 50.0, 1, 2, 1 },
+                    { 3, 150.0, 1, 3, 1 },
+                    { 5, 800.0, 1, 5, 1 },
+                    { 6, 50.0, 1, 6, 1 },
+                    { 7, 100.0, 1, 7, 1 },
+                    { 8, 100.0, 1, 1, 2 },
+                    { 9, 50.0, 1, 2, 2 },
+                    { 10, 150.0, 1, 3, 2 },
+                    { 11, 800.0, 1, 5, 2 },
+                    { 12, 50.0, 1, 6, 2 },
+                    { 13, 100.0, 1, 7, 2 }
+                });
+
+            migrationBuilder.InsertData(
+                table: "ExpensesTypes",
+                columns: new[] { "Id", "ExpenseType" },
+                values: new object[,]
+                {
+                    { 1, "Rent" },
+                    { 2, "Utilities" },
+                    { 3, "Groceries" },
+                    { 4, "Other" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "IncomeTypes",
+                columns: new[] { "Id", "IncomeType" },
+                values: new object[,]
+                {
+                    { 1, "Salary" },
+                    { 2, "Bonus" },
+                    { 3, "Other" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Months",
+                columns: new[] { "Id", "Month" },
+                values: new object[,]
+                {
+                    { 1, "January" },
+                    { 2, "February" },
+                    { 3, "March" },
+                    { 4, "April" },
+                    { 5, "May" },
+                    { 6, "June" },
+                    { 7, "July" },
+                    { 8, "August" },
+                    { 9, "September" },
+                    { 10, "October" },
+                    { 11, "November" },
+                    { 12, "December" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Years",
+                columns: new[] { "Id", "Year" },
+                values: new object[,]
+                {
+                    { 1, 2021 },
+                    { 2, 2022 },
+                    { 3, 2023 }
                 });
 
             migrationBuilder.CreateIndex(
@@ -164,6 +289,12 @@ namespace BookkeepingAPI.Migrations
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropTable(
+                name: "DummyExpenses");
+
+            migrationBuilder.DropTable(
+                name: "DummyIncomes");
+
             migrationBuilder.DropTable(
                 name: "Expenses");
 

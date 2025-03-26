@@ -7,24 +7,28 @@
       "RelativeMoniker": "D:0:0:{DA179D3F-6D48-4086-9FF0-33808BE5233D}|BookkeepingAPI\\BookkeepingAPI.csproj|solutionrelative:bookkeepingapi\\controllers\\expensescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DA179D3F-6D48-4086-9FF0-33808BE5233D}|BookkeepingAPI\\BookkeepingAPI.csproj|e:\\programming\\bookkeepingapp\\bookkeepingapi\\controllers\\typescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DA179D3F-6D48-4086-9FF0-33808BE5233D}|BookkeepingAPI\\BookkeepingAPI.csproj|solutionrelative:bookkeepingapi\\controllers\\typescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{DA179D3F-6D48-4086-9FF0-33808BE5233D}|BookkeepingAPI\\BookkeepingAPI.csproj|e:\\programming\\bookkeepingapp\\bookkeepingapi\\controllers\\incomecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DA179D3F-6D48-4086-9FF0-33808BE5233D}|BookkeepingAPI\\BookkeepingAPI.csproj|solutionrelative:bookkeepingapi\\controllers\\incomecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA179D3F-6D48-4086-9FF0-33808BE5233D}|BookkeepingAPI\\BookkeepingAPI.csproj|e:\\programming\\bookkeepingapp\\bookkeepingapi\\context\\bookkeepingcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA179D3F-6D48-4086-9FF0-33808BE5233D}|BookkeepingAPI\\BookkeepingAPI.csproj|solutionrelative:bookkeepingapi\\context\\bookkeepingcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DA179D3F-6D48-4086-9FF0-33808BE5233D}|BookkeepingAPI\\BookkeepingAPI.csproj|e:\\programming\\bookkeepingapp\\bookkeepingapi\\models\\incomes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DA179D3F-6D48-4086-9FF0-33808BE5233D}|BookkeepingAPI\\BookkeepingAPI.csproj|solutionrelative:bookkeepingapi\\models\\incomes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DA179D3F-6D48-4086-9FF0-33808BE5233D}|BookkeepingAPI\\BookkeepingAPI.csproj|e:\\programming\\bookkeepingapp\\bookkeepingapi\\models\\incometypes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DA179D3F-6D48-4086-9FF0-33808BE5233D}|BookkeepingAPI\\BookkeepingAPI.csproj|solutionrelative:bookkeepingapi\\models\\incometypes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{DA179D3F-6D48-4086-9FF0-33808BE5233D}|BookkeepingAPI\\BookkeepingAPI.csproj|e:\\programming\\bookkeepingapp\\bookkeepingapi\\models\\expenses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DA179D3F-6D48-4086-9FF0-33808BE5233D}|BookkeepingAPI\\BookkeepingAPI.csproj|solutionrelative:bookkeepingapi\\models\\expenses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA179D3F-6D48-4086-9FF0-33808BE5233D}|BookkeepingAPI\\BookkeepingAPI.csproj|e:\\programming\\bookkeepingapp\\bookkeepingapi\\controllers\\typescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA179D3F-6D48-4086-9FF0-33808BE5233D}|BookkeepingAPI\\BookkeepingAPI.csproj|solutionrelative:bookkeepingapi\\controllers\\typescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA179D3F-6D48-4086-9FF0-33808BE5233D}|BookkeepingAPI\\BookkeepingAPI.csproj|e:\\programming\\bookkeepingapp\\bookkeepingapi\\models\\incometypes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA179D3F-6D48-4086-9FF0-33808BE5233D}|BookkeepingAPI\\BookkeepingAPI.csproj|solutionrelative:bookkeepingapi\\models\\incometypes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DA179D3F-6D48-4086-9FF0-33808BE5233D}|BookkeepingAPI\\BookkeepingAPI.csproj|e:\\programming\\bookkeepingapp\\bookkeepingapi\\models\\years.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -37,14 +41,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{DA179D3F-6D48-4086-9FF0-33808BE5233D}|BookkeepingAPI\\BookkeepingAPI.csproj|e:\\programming\\bookkeepingapp\\bookkeepingapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{DA179D3F-6D48-4086-9FF0-33808BE5233D}|BookkeepingAPI\\BookkeepingAPI.csproj|solutionrelative:bookkeepingapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DA179D3F-6D48-4086-9FF0-33808BE5233D}|BookkeepingAPI\\BookkeepingAPI.csproj|e:\\programming\\bookkeepingapp\\bookkeepingapi\\migrations\\20250324100622_initialmigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DA179D3F-6D48-4086-9FF0-33808BE5233D}|BookkeepingAPI\\BookkeepingAPI.csproj|solutionrelative:bookkeepingapi\\migrations\\20250324100622_initialmigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DA179D3F-6D48-4086-9FF0-33808BE5233D}|BookkeepingAPI\\BookkeepingAPI.csproj|e:\\programming\\bookkeepingapp\\bookkeepingapi\\models\\expensestypes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DA179D3F-6D48-4086-9FF0-33808BE5233D}|BookkeepingAPI\\BookkeepingAPI.csproj|solutionrelative:bookkeepingapi\\models\\expensestypes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -54,84 +50,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ExpensesController.cs",
-              "DocumentMoniker": "E:\\Programming\\BookkeepingApp\\BookkeepingAPI\\Controllers\\ExpensesController.cs",
-              "RelativeDocumentMoniker": "BookkeepingAPI\\Controllers\\ExpensesController.cs",
-              "ToolTip": "E:\\Programming\\BookkeepingApp\\BookkeepingAPI\\Controllers\\ExpensesController.cs",
-              "RelativeToolTip": "BookkeepingAPI\\Controllers\\ExpensesController.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAADgv0QAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T10:21:52.409Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Years.cs",
-              "DocumentMoniker": "E:\\Programming\\BookkeepingApp\\BookkeepingAPI\\Models\\Years.cs",
-              "RelativeDocumentMoniker": "BookkeepingAPI\\Models\\Years.cs",
-              "ToolTip": "E:\\Programming\\BookkeepingApp\\BookkeepingAPI\\Models\\Years.cs",
-              "RelativeToolTip": "BookkeepingAPI\\Models\\Years.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T09:16:14.608Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Program.cs",
-              "DocumentMoniker": "E:\\Programming\\BookkeepingApp\\BookkeepingAPI\\Program.cs",
-              "RelativeDocumentMoniker": "BookkeepingAPI\\Program.cs",
-              "ToolTip": "E:\\Programming\\BookkeepingApp\\BookkeepingAPI\\Program.cs",
-              "RelativeToolTip": "BookkeepingAPI\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T09:04:55.985Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "IncomeController.cs",
-              "DocumentMoniker": "E:\\Programming\\BookkeepingApp\\BookkeepingAPI\\Controllers\\IncomeController.cs",
-              "RelativeDocumentMoniker": "BookkeepingAPI\\Controllers\\IncomeController.cs",
-              "ToolTip": "E:\\Programming\\BookkeepingApp\\BookkeepingAPI\\Controllers\\IncomeController.cs",
-              "RelativeToolTip": "BookkeepingAPI\\Controllers\\IncomeController.cs",
-              "ViewState": "AgIAACwAAAAAAAAAAAAwwFMAAAAiAAAAAAAAAA==",
+              "Title": "BookkeepingContext.cs",
+              "DocumentMoniker": "E:\\Programming\\BookkeepingApp\\BookkeepingAPI\\Context\\BookkeepingContext.cs",
+              "RelativeDocumentMoniker": "BookkeepingAPI\\Context\\BookkeepingContext.cs",
+              "ToolTip": "E:\\Programming\\BookkeepingApp\\BookkeepingAPI\\Context\\BookkeepingContext.cs",
+              "RelativeToolTip": "BookkeepingAPI\\Context\\BookkeepingContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T10:12:54.059Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Expenses.cs",
-              "DocumentMoniker": "E:\\Programming\\BookkeepingApp\\BookkeepingAPI\\Models\\Expenses.cs",
-              "RelativeDocumentMoniker": "BookkeepingAPI\\Models\\Expenses.cs",
-              "ToolTip": "E:\\Programming\\BookkeepingApp\\BookkeepingAPI\\Models\\Expenses.cs",
-              "RelativeToolTip": "BookkeepingAPI\\Models\\Expenses.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T09:22:03.501Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "TypesController.cs",
-              "DocumentMoniker": "E:\\Programming\\BookkeepingApp\\BookkeepingAPI\\Controllers\\TypesController.cs",
-              "RelativeDocumentMoniker": "BookkeepingAPI\\Controllers\\TypesController.cs",
-              "ToolTip": "E:\\Programming\\BookkeepingApp\\BookkeepingAPI\\Controllers\\TypesController.cs",
-              "RelativeToolTip": "BookkeepingAPI\\Controllers\\TypesController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T16:23:00.459Z",
+              "WhenOpened": "2025-03-26T15:28:08.388Z",
               "EditorCaption": ""
             },
             {
@@ -142,7 +73,7 @@
               "RelativeDocumentMoniker": "BookkeepingAPI\\Models\\Incomes.cs",
               "ToolTip": "E:\\Programming\\BookkeepingApp\\BookkeepingAPI\\Models\\Incomes.cs",
               "RelativeToolTip": "BookkeepingAPI\\Models\\Incomes.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAtAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-24T17:29:50.321Z",
               "EditorCaption": ""
@@ -150,6 +81,81 @@
             {
               "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "Expenses.cs",
+              "DocumentMoniker": "E:\\Programming\\BookkeepingApp\\BookkeepingAPI\\Models\\Expenses.cs",
+              "RelativeDocumentMoniker": "BookkeepingAPI\\Models\\Expenses.cs",
+              "ToolTip": "E:\\Programming\\BookkeepingApp\\BookkeepingAPI\\Models\\Expenses.cs",
+              "RelativeToolTip": "BookkeepingAPI\\Models\\Expenses.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-24T09:22:03.501Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IncomeController.cs",
+              "DocumentMoniker": "E:\\Programming\\BookkeepingApp\\BookkeepingAPI\\Controllers\\IncomeController.cs",
+              "RelativeDocumentMoniker": "BookkeepingAPI\\Controllers\\IncomeController.cs",
+              "ToolTip": "E:\\Programming\\BookkeepingApp\\BookkeepingAPI\\Controllers\\IncomeController.cs",
+              "RelativeToolTip": "BookkeepingAPI\\Controllers\\IncomeController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAC0AAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-24T10:12:54.059Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ExpensesController.cs",
+              "DocumentMoniker": "E:\\Programming\\BookkeepingApp\\BookkeepingAPI\\Controllers\\ExpensesController.cs",
+              "RelativeDocumentMoniker": "BookkeepingAPI\\Controllers\\ExpensesController.cs",
+              "ToolTip": "E:\\Programming\\BookkeepingApp\\BookkeepingAPI\\Controllers\\ExpensesController.cs",
+              "RelativeToolTip": "BookkeepingAPI\\Controllers\\ExpensesController.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAIwFMAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-24T10:21:52.409Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "TypesController.cs",
+              "DocumentMoniker": "E:\\Programming\\BookkeepingApp\\BookkeepingAPI\\Controllers\\TypesController.cs",
+              "RelativeDocumentMoniker": "BookkeepingAPI\\Controllers\\TypesController.cs",
+              "ToolTip": "E:\\Programming\\BookkeepingApp\\BookkeepingAPI\\Controllers\\TypesController.cs",
+              "RelativeToolTip": "BookkeepingAPI\\Controllers\\TypesController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-24T16:23:00.459Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\Programming\\BookkeepingApp\\BookkeepingAPI\\Program.cs",
+              "RelativeDocumentMoniker": "BookkeepingAPI\\Program.cs",
+              "ToolTip": "E:\\Programming\\BookkeepingApp\\BookkeepingAPI\\Program.cs",
+              "RelativeToolTip": "BookkeepingAPI\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-24T09:04:55.985Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Years.cs",
+              "DocumentMoniker": "E:\\Programming\\BookkeepingApp\\BookkeepingAPI\\Models\\Years.cs",
+              "RelativeDocumentMoniker": "BookkeepingAPI\\Models\\Years.cs",
+              "ToolTip": "E:\\Programming\\BookkeepingApp\\BookkeepingAPI\\Models\\Years.cs",
+              "RelativeToolTip": "BookkeepingAPI\\Models\\Years.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-24T09:16:14.608Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "IncomeTypes.cs",
               "DocumentMoniker": "E:\\Programming\\BookkeepingApp\\BookkeepingAPI\\Models\\IncomeTypes.cs",
               "RelativeDocumentMoniker": "BookkeepingAPI\\Models\\IncomeTypes.cs",
@@ -157,12 +163,11 @@
               "RelativeToolTip": "BookkeepingAPI\\Models\\IncomeTypes.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T09:19:17.746Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-24T09:19:17.746Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "appsettings.json",
               "DocumentMoniker": "E:\\Programming\\BookkeepingApp\\BookkeepingAPI\\appsettings.json",
               "RelativeDocumentMoniker": "BookkeepingAPI\\appsettings.json",
@@ -170,34 +175,7 @@
               "RelativeToolTip": "BookkeepingAPI\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAB8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-03-24T09:49:20.628Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "20250324100622_InitialMigration.cs",
-              "DocumentMoniker": "E:\\Programming\\BookkeepingApp\\BookkeepingAPI\\Migrations\\20250324100622_InitialMigration.cs",
-              "RelativeDocumentMoniker": "BookkeepingAPI\\Migrations\\20250324100622_InitialMigration.cs",
-              "ToolTip": "E:\\Programming\\BookkeepingApp\\BookkeepingAPI\\Migrations\\20250324100622_InitialMigration.cs",
-              "RelativeToolTip": "BookkeepingAPI\\Migrations\\20250324100622_InitialMigration.cs",
-              "ViewState": "AgIAAIIAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T10:06:22.764Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ExpensesTypes.cs",
-              "DocumentMoniker": "E:\\Programming\\BookkeepingApp\\BookkeepingAPI\\Models\\ExpensesTypes.cs",
-              "RelativeDocumentMoniker": "BookkeepingAPI\\Models\\ExpensesTypes.cs",
-              "ToolTip": "E:\\Programming\\BookkeepingApp\\BookkeepingAPI\\Models\\ExpensesTypes.cs",
-              "RelativeToolTip": "BookkeepingAPI\\Models\\ExpensesTypes.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAA4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T09:20:58.403Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-24T09:49:20.628Z"
             }
           ]
         }

@@ -33,22 +33,44 @@ namespace BookkeepingAPI.Controllers
                 return BadRequest(e.Message);
             }
         }
-
+        [HttpGet("dummy/{yearId:int}")]
+        public async Task<IActionResult> GetDummyIncomes(int yearId)
+        {
+            try
+            {
+                var incomes = await db.DummyIncomes.Where(i => i.yearId == yearId).ToListAsync();
+                return Ok(incomes);
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
+            }
+        }
         [HttpGet("cumulative/{year}")]
         public async Task<IActionResult> GetCumulativeIncomes(int year)
         {
             try
             {
                 var cumulativeIncomes = new List<CumulativeIncomes>();
-                var incomes = await db.Incomes.Where(i => i.yearId == year).ToListAsync();
-                double sum = 0;
-                foreach (var income in incomes)
+                var incomes = await db.DummyIncomes.Where(i => i.yearId == year).ToListAsync();
+                var incomesSums = new Dictionary<int, double>();
+                for (int i = 1; i <= 12; i++)
                 {
-                    sum += income.Amount;
+                    var incomesForMonth = incomes.Where(income => income.monthId == i);
+
+                    double totalIncomeForMonth = incomesForMonth.Count() != 0 ? incomesForMonth.Sum(income => income.Amount) : 0;
+
+                    incomesSums[i] = totalIncomeForMonth;
+                }
+                var sortedDictionary = new SortedDictionary<int, double>(incomesSums);
+                double sum = 0;
+                foreach (var income in sortedDictionary)
+                {
+                    sum += income.Value;
                     cumulativeIncomes.Add(new CumulativeIncomes()
                     {
-                        yearId = income.yearId,                 
-                        monthId = income.monthId,           
+                        yearId = year,                 
+                        monthId = income.Key,           
                         Amount = sum
                     });
                 }
@@ -65,9 +87,9 @@ namespace BookkeepingAPI.Controllers
         {
             try
             {
-                var year = await db.Years.FindAsync(income.yearId);
-                var month = await db.Months.FindAsync(income.monthId);
-                var incomeType = await db.IncomeTypes.FindAsync(income.incomeTypeId);
+                var year = await db.Years.FirstOrDefaultAsync(y => y.Id == income.yearId);
+                var month = await db.Months.FirstOrDefaultAsync(m => m.Id == income.monthId);
+                var incomeType = await db.IncomeTypes.FirstOrDefaultAsync(t => t.Id == income.incomeTypeId);
                 
                 var newIncome = new Incomes
                 {
@@ -90,11 +112,22 @@ namespace BookkeepingAPI.Controllers
         }
 
         [HttpPut]
-        public async Task<IActionResult> UpdateIncome([FromBody] Incomes income)
+        public async Task<IActionResult> UpdateIncome([FromBody] NewIncome income)
         {
             try
             {
-                db.Incomes.Update(income);
+                var existingIncome = await db.Incomes.SingleOrDefaultAsync(e =>
+                        e.yearId == income.yearId &&
+                        e.monthId == income.monthId &&
+                        e.incomeTypeId == income.incomeTypeId);
+
+                if (existingIncome == null)
+                {
+                    return NotFound("Expense not found.");
+                }
+                existingIncome.Amount = income.Amount;
+
+                db.Incomes.Update(existingIncome);
                 await db.SaveChangesAsync();
                 return Ok(income);
             }

@@ -170,3 +170,4 @@ E:\Programming\BookkeepingApp\BookkeepingAPI\obj\Debug\net8.0\refint\Bookkeeping
 E:\Programming\BookkeepingApp\BookkeepingAPI\obj\Debug\net8.0\BookkeepingAPI.pdb
 E:\Programming\BookkeepingApp\BookkeepingAPI\obj\Debug\net8.0\BookkeepingAPI.genruntimeconfig.cache
 E:\Programming\BookkeepingApp\BookkeepingAPI\obj\Debug\net8.0\ref\BookkeepingAPI.dll
+E:\Programming\BookkeepingApp\BookkeepingAPI\obj\Debug\net8.0\BookkeepingAPI.sourcelink.json

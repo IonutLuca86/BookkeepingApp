@@ -52,8 +52,7 @@ export default function AddNewYear(props) {
     console.log(newYear)
     console.log(showConfirmation)
     return(
-        <div>
-            {/* <form action="submit"> */}
+        <div>  
                 <label htmlFor="year">Select new year to add: </label>
                 <select name="yearSelect" id="year" onChange={handleSelectChange}>
                     <option value="">---</option>
@@ -75,8 +74,7 @@ export default function AddNewYear(props) {
                                    
                                 </div>
                             </div>
-                        )}
-            {/* </form> */}
+                        )}    
         </div>
     )
 }

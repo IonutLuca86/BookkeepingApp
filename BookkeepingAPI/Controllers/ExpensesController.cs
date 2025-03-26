@@ -33,13 +33,39 @@ namespace BookkeepingAPI.Controllers
                 return BadRequest(e.Message);
             }
         }
-
-        [HttpPost]
-        public async Task<IActionResult> AddExpense(Expenses expense)
+        [HttpGet("dummy/{yearId:int}")]
+        public async Task<IActionResult> GetDummyExpenses(int yearId)
         {
             try
             {
-                db.Expenses.Add(expense);
+                var expenses = await db.DummyExpenses.Where(e => e.yearId == yearId).ToListAsync();
+                return Ok(expenses);
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
+            }
+        }
+        [HttpPost]
+        public async Task<IActionResult> AddExpense([FromBody] NewExpense expense)
+        {
+            try
+            {
+                var year = await db.Years.SingleOrDefaultAsync(y => y.Id == expense.yearId);
+                var month = await db.Months.SingleOrDefaultAsync(m => m.Id == expense.monthId);
+                var expenseType = await db.ExpensesTypes.SingleOrDefaultAsync(et => et.Id == expense.expenseTypeId);
+
+                var newExpense = new Expenses
+                {
+                    yearId = expense.yearId,
+                    Year = year,
+                    monthId = expense.monthId,
+                    Month = month,
+                    expenseTypeId = expense.expenseTypeId,
+                    ExpenseType = expenseType,
+                    Amount = expense.Amount
+                };
+                db.Expenses.Add(newExpense);
                 await db.SaveChangesAsync();
                 return Ok(expense);
             }
@@ -55,15 +81,25 @@ namespace BookkeepingAPI.Controllers
             try
             {
                 var cumulativeExpenses = new List<CumulativeExpenses>();
-                var expenses = await db.Expenses.Where(e => e.yearId == year).ToListAsync();
-                double sum = 0;
-                foreach (var expense in expenses)
+                var expenses = await db.DummyExpenses.Where(e => e.yearId == year).ToListAsync();
+                var expensesSums = new Dictionary<int, double>();
+                for (int i = 1; i <= 12; i++)
                 {
-                    sum += expense.Amount;
+                    var expensesForMonth = expenses.Where(expense => expense.monthId == i);
+
+                    double totalExpensesForMonth = expensesForMonth.Count() != 0 ? expensesForMonth.Sum(expense => expense.Amount) : 0;
+
+                    expensesSums[i] = totalExpensesForMonth;
+                }
+                var sortedDictionary = new SortedDictionary<int, double>(expensesSums);
+                double sum = 0;
+                foreach (var expense in sortedDictionary)
+                {
+                    sum += expense.Value;
                     cumulativeExpenses.Add(new CumulativeExpenses()
                     {
-                        yearId = expense.yearId,           
-                        monthId = expense.monthId,              
+                        yearId = year,
+                        monthId = expense.Key,
                         Amount = sum
                     });
                 }
@@ -75,12 +111,23 @@ namespace BookkeepingAPI.Controllers
             }
         }
 
+
         [HttpPut]
-        public async Task<IActionResult> UpdateExpense(Expenses expense)
+        public async Task<IActionResult> UpdateExpense([FromBody] NewExpense expense)
         {
             try
             {
-                db.Expenses.Update(expense);
+                var existingExpense = await db.Expenses.SingleOrDefaultAsync(e =>
+                            e.yearId == expense.yearId &&
+                            e.monthId == expense.monthId &&
+                            e.expenseTypeId == expense.expenseTypeId);
+                if (existingExpense == null)
+                {
+                    return NotFound("Expense not found.");
+                }
+                existingExpense.Amount = expense.Amount;
+
+                db.Expenses.Update(existingExpense);
                 await db.SaveChangesAsync();
                 return Ok(expense);
             }

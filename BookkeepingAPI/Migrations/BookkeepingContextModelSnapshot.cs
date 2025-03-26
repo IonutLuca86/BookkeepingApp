@@ -21,6 +21,276 @@ namespace BookkeepingAPI.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("BookkeepingAPI.Models.DummyExpenses", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<double>("Amount")
+                        .HasColumnType("float");
+
+                    b.Property<int>("expenseTypeId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("monthId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("yearId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("DummyExpenses");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Amount = 200.0,
+                            expenseTypeId = 1,
+                            monthId = 1,
+                            yearId = 1
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Amount = 70.0,
+                            expenseTypeId = 1,
+                            monthId = 2,
+                            yearId = 1
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Amount = 120.0,
+                            expenseTypeId = 1,
+                            monthId = 3,
+                            yearId = 1
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Amount = 200.0,
+                            expenseTypeId = 1,
+                            monthId = 4,
+                            yearId = 1
+                        },
+                        new
+                        {
+                            Id = 5,
+                            Amount = 300.0,
+                            expenseTypeId = 1,
+                            monthId = 5,
+                            yearId = 1
+                        },
+                        new
+                        {
+                            Id = 6,
+                            Amount = 50.0,
+                            expenseTypeId = 1,
+                            monthId = 6,
+                            yearId = 1
+                        },
+                        new
+                        {
+                            Id = 7,
+                            Amount = 50.0,
+                            expenseTypeId = 1,
+                            monthId = 7,
+                            yearId = 1
+                        },
+                        new
+                        {
+                            Id = 8,
+                            Amount = 100.0,
+                            expenseTypeId = 1,
+                            monthId = 1,
+                            yearId = 2
+                        },
+                        new
+                        {
+                            Id = 9,
+                            Amount = 130.0,
+                            expenseTypeId = 1,
+                            monthId = 2,
+                            yearId = 2
+                        },
+                        new
+                        {
+                            Id = 10,
+                            Amount = 150.0,
+                            expenseTypeId = 1,
+                            monthId = 3,
+                            yearId = 2
+                        },
+                        new
+                        {
+                            Id = 11,
+                            Amount = 200.0,
+                            expenseTypeId = 1,
+                            monthId = 4,
+                            yearId = 2
+                        },
+                        new
+                        {
+                            Id = 12,
+                            Amount = 300.0,
+                            expenseTypeId = 1,
+                            monthId = 5,
+                            yearId = 2
+                        },
+                        new
+                        {
+                            Id = 13,
+                            Amount = 50.0,
+                            expenseTypeId = 1,
+                            monthId = 6,
+                            yearId = 2
+                        },
+                        new
+                        {
+                            Id = 14,
+                            Amount = 50.0,
+                            expenseTypeId = 1,
+                            monthId = 7,
+                            yearId = 2
+                        },
+                        new
+                        {
+                            Id = 15,
+                            Amount = 100.0,
+                            expenseTypeId = 1,
+                            monthId = 8,
+                            yearId = 2
+                        });
+                });
+
+            modelBuilder.Entity("BookkeepingAPI.Models.DummyIncomes", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<double>("Amount")
+                        .HasColumnType("float");
+
+                    b.Property<int>("incomeTypeId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("monthId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("yearId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("DummyIncomes");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Amount = 100.0,
+                            incomeTypeId = 1,
+                            monthId = 1,
+                            yearId = 1
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Amount = 50.0,
+                            incomeTypeId = 1,
+                            monthId = 2,
+                            yearId = 1
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Amount = 150.0,
+                            incomeTypeId = 1,
+                            monthId = 3,
+                            yearId = 1
+                        },
+                        new
+                        {
+                            Id = 5,
+                            Amount = 800.0,
+                            incomeTypeId = 1,
+                            monthId = 5,
+                            yearId = 1
+                        },
+                        new
+                        {
+                            Id = 6,
+                            Amount = 50.0,
+                            incomeTypeId = 1,
+                            monthId = 6,
+                            yearId = 1
+                        },
+                        new
+                        {
+                            Id = 7,
+                            Amount = 100.0,
+                            incomeTypeId = 1,
+                            monthId = 7,
+                            yearId = 1
+                        },
+                        new
+                        {
+                            Id = 8,
+                            Amount = 100.0,
+                            incomeTypeId = 1,
+                            monthId = 1,
+                            yearId = 2
+                        },
+                        new
+                        {
+                            Id = 9,
+                            Amount = 50.0,
+                            incomeTypeId = 1,
+                            monthId = 2,
+                            yearId = 2
+                        },
+                        new
+                        {
+                            Id = 10,
+                            Amount = 150.0,
+                            incomeTypeId = 1,
+                            monthId = 3,
+                            yearId = 2
+                        },
+                        new
+                        {
+                            Id = 11,
+                            Amount = 800.0,
+                            incomeTypeId = 1,
+                            monthId = 5,
+                            yearId = 2
+                        },
+                        new
+                        {
+                            Id = 12,
+                            Amount = 50.0,
+                            incomeTypeId = 1,
+                            monthId = 6,
+                            yearId = 2
+                        },
+                        new
+                        {
+                            Id = 13,
+                            Amount = 100.0,
+                            incomeTypeId = 1,
+                            monthId = 7,
+                            yearId = 2
+                        });
+                });
+
             modelBuilder.Entity("BookkeepingAPI.Models.Expenses", b =>
                 {
                     b.Property<int>("Id")
